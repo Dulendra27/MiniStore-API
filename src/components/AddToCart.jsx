@@ -14,7 +14,6 @@ return(
               <h2 className='add-name'>{select.title}</h2>
               <p className='add-price'>PRICE : ${select.price}</p>
               <p className="add-category">CATEGORY : {select.category} </p>
-              <p className='add-description'>DESCRIPTION :  {select.description}</p>
        </div>
        </>
        )

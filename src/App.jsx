@@ -11,8 +11,9 @@ export default function App() {
     return(
     
         <div className='product-list-container'>
-        <h1 className='heading'> MINI STORE </h1>
-     <nav className="search-container">
+        <Link to="/Home"><button className='heading'> MINI STORE </button></Link>
+     <div className="search-container">
+
       <input type="text"
       className="search-input"
       placeholder="Search For Products"
@@ -20,14 +21,17 @@ export default function App() {
       onChange={handleInputChange}
       />
       <button className="search-btn" onClick={handleSearch}>Search</button>
+     
       <Link to="/Items"> <button className="items-btn">Items</button></Link>
      
      <Link to="/AddToCart"><img src={add_icon} alt="" className="add-to-cart" /></Link>
-      </nav>
+     
+      </div>
       
     
      <Routes>
      <Route path="/" element={<Home/>}/>
+     <Route path="/Home" element={<Home/>}/>
      <Route path="/Items" element={<Items/>}/>
      <Route path="/AddToCart" element={<AddToCart/>} />
       </Routes>
